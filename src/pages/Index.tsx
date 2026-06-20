@@ -7,6 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 const HERO_IMG = 'https://cdn.poehali.dev/projects/1661d12a-2c01-4998-9e1f-37ac2c597b5a/files/d291841e-d387-4321-9e3b-6addfe992872.jpg';
 const INTERIOR_IMG = 'https://cdn.poehali.dev/projects/1661d12a-2c01-4998-9e1f-37ac2c597b5a/files/9212ffe9-ed69-49a7-b941-02b6722569f3.jpg';
 const CAT_IMG = 'https://cdn.poehali.dev/projects/1661d12a-2c01-4998-9e1f-37ac2c597b5a/files/76dff586-fa87-47a7-b488-c0006857a98b.jpg';
+const LOGO_IMG = 'https://cdn.poehali.dev/projects/1661d12a-2c01-4998-9e1f-37ac2c597b5a/bucket/d9df8623-9a31-490e-90b6-8d900537b805.jpg';
 
 const NAV = [
   { id: 'about', label: 'О клинике' },
@@ -45,10 +46,8 @@ const Index = () => {
       {/* Header */}
       <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/80 border-b border-border/60">
         <div className="container flex items-center justify-between h-20">
-          <button onClick={() => scrollTo('hero')} className="flex items-center gap-2">
-            <span className="grid place-items-center w-11 h-11 rounded-full bg-primary text-primary-foreground">
-              <Icon name="PawPrint" size={22} />
-            </span>
+          <button onClick={() => scrollTo('hero')} className="flex items-center gap-3">
+            <img src={LOGO_IMG} alt="Логотип Багира" className="w-12 h-12 rounded-full object-cover ring-1 ring-primary/30" />
             <span className="font-display text-3xl font-bold leading-none">Багира</span>
           </button>
           <nav className="hidden md:flex items-center gap-8">
@@ -91,6 +90,7 @@ const Index = () => {
           <div className="relative animate-float">
             <div className="absolute -inset-4 bg-accent/15 rounded-[2.5rem] -rotate-3" />
             <img src={HERO_IMG} alt="Ветеринар с питомцами" className="relative rounded-[2rem] shadow-2xl w-full object-cover aspect-square" />
+            <img src={LOGO_IMG} alt="Логотип Багира" className="absolute -top-5 -right-5 w-24 h-24 md:w-28 md:h-28 rounded-full object-cover shadow-xl ring-4 ring-card bg-card" />
             <div className="absolute -bottom-6 -left-6 bg-card rounded-2xl shadow-xl px-6 py-4 flex items-center gap-3">
               <span className="grid place-items-center w-11 h-11 rounded-full bg-primary/10 text-primary">
                 <Icon name="Clock" size={22} />
@@ -215,7 +215,7 @@ const Index = () => {
                 </span>
                 <div>
                   <p className="font-semibold">Адрес</p>
-                  <p className="text-muted-foreground text-sm">г. Москва, ул. Лесная, 14</p>
+                  <p className="text-muted-foreground text-sm">г. Донецк, ул. Лесная, 14</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -278,8 +278,8 @@ const Index = () => {
       {/* Footer */}
       <footer className="bg-primary text-primary-foreground py-12">
         <div className="container flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-2">
-            <Icon name="PawPrint" size={24} />
+          <div className="flex items-center gap-3">
+            <img src={LOGO_IMG} alt="Логотип Багира" className="w-12 h-12 rounded-full object-cover ring-2 ring-primary-foreground/30" />
             <span className="font-display text-2xl font-bold">Багира</span>
           </div>
           <p className="text-sm text-primary-foreground/70">Ветеринарная клиника заботы · © 2024</p>
